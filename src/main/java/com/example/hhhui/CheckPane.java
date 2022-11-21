@@ -38,30 +38,31 @@ public class CheckPane {
     }
 
     public void setCalculatedBMI(double yourBmi) {
+        String yBMI = String.valueOf((double) yourBmi);
         bmiLabel.setText(String.valueOf(yourBmi));
         if (yourBmi<16.0){
-            bmiLabel.setText("Your BMI: " + yourBmi + " Underweight (Severe thinness)");
+            bmiLabel.setText("Your BMI: " + yBMI.substring(0, 3) + " \nUnderweight (Severe thinness)");
         }else
         if (yourBmi<16.9){
-            bmiLabel.setText("Your BMI: " + yourBmi + " Underweight (Moderate thinness)");
+            bmiLabel.setText("Your BMI: " + yBMI.substring(0, 3) + " \nUnderweight (Moderate thinness)");
         } else
         if (yourBmi<18.4){
-            bmiLabel.setText("Your BMI: " + yourBmi + " Underweight (Mild thinness)");
+            bmiLabel.setText("Your BMI: " + yBMI.substring(0, 3) + " \nUnderweight (Mild thinness)");
         } else
         if (yourBmi<24.9){
-            bmiLabel.setText("Your BMI: " + yourBmi + " Normal range ");
+            bmiLabel.setText("Your BMI: " + yBMI.substring(0, 3) + " \nNormal range ");
         } else
         if (yourBmi<29.9){
-           bmiLabel.setText("Your BMI: " + yourBmi + " Overweight (Pre-obese) ");
+           bmiLabel.setText("Your BMI: " + yBMI.substring(0, 3) + " \nOverweight (Pre-obese) ");
         } else
         if (yourBmi<34.9){
-            bmiLabel.setText("Your BMI: " + yourBmi + " Obese (Class I) ");
+            bmiLabel.setText("Your BMI: " + yBMI.substring(0, 3) + " \nObese (Class I) ");
         } else
         if (yourBmi<39.9){
-            bmiLabel.setText("Your BMI: " + yourBmi + " Obese (Class II)");
-        } else
-        if (yourBmi<40.0){
-            bmiLabel.setText("Your BMI: " + yourBmi + " Obese (Class III) ");
+            bmiLabel.setText("Your BMI: " + yBMI.substring(0, 3) + " \nObese (Class II)");
+        } else{
+            bmiLabel.setText("Your BMI: " + yBMI.substring(0, 3) + " \nObese (Class III) ");
         }
         }
     }
+
